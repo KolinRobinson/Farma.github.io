@@ -3,9 +3,11 @@
   height: 165px
   border-bottom: 2px solid rgba(0, 0, 0, 1)
   position: fixed
+  background-color: rgba(255, 255, 255, .85)
+  z-index: 100
   .header_wrapper
     display: flex
-    align-items: center
+    align-items: flex-end
     justify-content: space-between
     flex-wrap: wrap
     min-height: 165px
@@ -17,6 +19,8 @@
       align-items: center
       justify-content: space-around
       flex-wrap: wrap
+      margin: 2px
+      height: 96px
       .menu_item
         display: flex
         flex: 1 1
@@ -27,22 +31,32 @@
           width: 100%
           color: $black
           padding: 20px 40px 40px
+          line-height: normal
         .active
           background-color: $blue
           color: $white
     .lang_wrapper
       display: flex
       align-items: center
-      justify-content: space-between
       flex-wrap: wrap
+      height: 96px
+      margin: 2px
       .lang_item
         display: flex
+        opacity: 0
+        width: 0
         .lang_links
           text-decoration: none
           color: $black
+      .lang_item_active
+        opacity: 1
+        width: 2.66rem
+    .log_in_wrapper
+      display: flex
+      height: 100px
+      align-items: center
       .log_in
-        text-decoration: none
-        display: flex
-        color: $white
-        background-color: $blue
         height: 30px
+        width: 30px
+
+
