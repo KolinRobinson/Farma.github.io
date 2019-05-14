@@ -1,62 +1,91 @@
 .section_header
   width: 100%
-  height: 165px
+  height: 8rem
   border-bottom: 2px solid rgba(0, 0, 0, 1)
   position: fixed
   background-color: rgba(255, 255, 255, .85)
-  z-index: 100
+  z-index: 10
   .header_wrapper
     display: flex
-    align-items: flex-end
     justify-content: space-between
     flex-wrap: wrap
-    min-height: 165px
+    height: 100%
     .header_logo
-      height: 130px
-      width: 230px
-    .menu_wrapper
-      display: flex
-      align-items: center
-      justify-content: space-around
-      flex-wrap: wrap
-      margin: 2px
-      height: 96px
-      .menu_item
+      height: 100%
+      position: relative
+      .home_link
         display: flex
-        flex: 1 1
-        min-width: 100px
-        .menu_links
-          text-decoration: none
-          height: 100%
-          width: 100%
-          color: $black
-          padding: 20px 40px 40px
-          line-height: normal
-        .active
-          background-color: $blue
-          color: $white
-    .lang_wrapper
+        align-items: center
+        width: 100%
+        height: 100%
+        padding: 1.25rem 0
+        img
+          height: 100% !important
+    .header_menu
       display: flex
-      align-items: center
-      flex-wrap: wrap
-      height: 96px
-      margin: 2px
-      .lang_item
+      align-items: flex-end
+      .header_menu_wrapper
         display: flex
-        opacity: 0
-        width: 0
-        .lang_links
-          text-decoration: none
-          color: $black
-      .lang_item_active
-        opacity: 1
-        width: 2.66rem
-    .log_in_wrapper
-      display: flex
-      height: 100px
-      align-items: center
-      .log_in
-        height: 30px
-        width: 30px
+        justify-content: flex-start
+        flex-wrap: wrap
+        align-items: stretch
+        .menu_wrapper
+          display: flex
+          flex-wrap: wrap
+          .menu_item
+            position: relative
+            display: inline-block
+            .menu_links
+              text-decoration: none
+              height: 100%
+              width: 100%
+              color: $black
+              padding: 1.25rem
+              line-height: normal
+              font-size: 1.25rem
+              font-family: 'robotoslablight',sans-serif
+            .active
+              background-color: $blue
+              color: $white
+        .lang_wrapper
+          position: relative
+          display: flex
+          align-items: center
+          width: 4.6vw
+          margin-right: 1rem
+          &:after
+            content: ''
+            background-image: url("/img/lang.png")
+            height: 9px
+            width: 12px
+            background-repeat: no-repeat
+            background-size: 100% 100%
+            transform: rotate(0deg)
+            transition: all .5s
+          .lang_item
+            display: flex
+            opacity: 0
+            width: 0
+            transform: scale(0)
+            overflow: hidden
+            .lang_links
+              text-decoration: none
+              color: $black
+              &:hover
+                color: #3eb5f1
+          .lang_item_active
+            opacity: 1
+            width: 2.66rem
+            transform: scale(1)
+        .lang_wrapper_active
+          width: 10.5vw
+        .log_in_wrapper
+          position: relative
+          display: flex
+          align-items: center
+          .log_in
+            display: inline-flex
+
+
 
 

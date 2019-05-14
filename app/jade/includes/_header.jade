@@ -4,25 +4,26 @@ section.section_header
             div.header_logo
                 a(href="/index.html").home_link
                     img(src="img/logo.png")
-            nav.main_menu
-                ul.menu_wrapper
-                    li.menu_item
-                        a(href="/about.html").menu_links О компании
-                    li.menu_item
-                        a(href="/catalog.html").menu_links.active Каталог препаратов
-                    li.menu_item
-                        a(href="/controll.html").menu_links Фармаконадзор
-                    li.menu_item
-                        a(href="/contact.html").menu_links Контакты
-            div.other_menu
-                ul.lang_wrapper
-                    li.lang_item.lang_item_active
-                        a(href="#").lang_links rus
-                    li.lang_item
-                        a(href="#").lang_links ukr
-                    li.lang_item
-                        a(href="#").lang_links eng
-            div.log_in_wrapper
-                a(href="#").log_in
-                    img(src="img/in_icon.png")
-
+            div.header_menu
+                div.header_menu_wrapper
+                    nav.main_menu
+                        ul.menu_wrapper
+                            li.menu_item
+                                a(href="/about.html").menu_links.active О компании
+                            li.menu_item
+                                a(href="/catalog.html").menu_links Каталог препаратов
+                            li.menu_item
+                                a(href="/controll.html").menu_links Фармаконадзор
+                            li.menu_item
+                                a(href="/contact.html").menu_links Контакты
+                    div.other_menu
+                        ul.lang_wrapper.lang_wrapper_active
+                            li.lang_item.lang_item_active
+                                a(href="#").lang_links rus
+                            li.lang_item
+                                a(href="#").lang_links ukr
+                            li.lang_item
+                                a(href="#").lang_links eng
+                    div.log_in_wrapper
+                        a(href="#").log_in
+                            img(src="img/in_icon.png")
