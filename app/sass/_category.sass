@@ -1,0 +1,73 @@
+.categories_padding
+  padding: 3.75rem 0
+.category_wrapper
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  .category_item
+    position: relative
+    display: flex
+    justify-content: space-between
+    flex: 0 1 340px
+    cursor: pointer
+    background-color: #3db5f1
+    border-radius: 4px
+    overflow: hidden
+    height: 5rem
+    margin: 0 1.25rem 1.25rem
+    transition: all 0.5s
+    &:hover .item_image
+      opacity: -1
+      transform: scale(0)
+    &:hover .items_image:after
+      left: calc(50% - 6px)
+    &:hover .category_link:after
+      width: 100%
+    .category_link
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      flex: 1 1 0
+      padding: 1.25rem
+      overflow: hidden
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        width: 0
+        height: 100%
+        background-color: #353535
+        transition: all .5s
+      .item_name
+        position: relative
+        z-index: 2
+        color: $white
+        margin: 0
+    .items_image
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 5rem
+      background-color: #353535
+      overflow: hidden
+      &:after
+        content: ''
+        top: calc(50% - 11px)
+        position: absolute
+        left: 150%
+        display: flex
+        width: 13px
+        height: 23px
+        background-image: url("/img/link_right_icon.png")
+        background-repeat: no-repeat
+        background-size: 100% 100%
+        transition: all .5s
+      .item_image
+        max-width: 70%
+        opacity: 1
+        transform: scale(1)
+        transition: all .5s
