@@ -1,4 +1,5 @@
 .section_header
+  display: none
   width: 100%
   height: 11rem
   border-bottom: 2px solid rgba(0, 0, 0, 1)
@@ -86,6 +87,170 @@
           .log_in
             display: inline-flex
 
+.section_header__small
+  display: none
+  width: 100%
+  height: 4.5rem
+  border-bottom: 2px solid rgba(0, 0, 0, 1)
+  position: fixed
+  background-color: rgba(255, 255, 255, 1)
+  z-index: 10
+  .header_wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    height: 100%
+    align-items: stretch
+    .header_logo
+      height: 100%
+      position: relative
+      .home_link
+        display: flex
+        align-items: center
+        width: 100%
+        height: 100%
+        padding: .25rem 0
+        img
+          max-height: 4rem
+          height: 100% !important
+    .header_menu
+      display: flex
+      align-items: flex-end
+      .header_menu_wrapper
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        align-items: stretch
+        .menu_wrapper
+          display: flex
+          flex-wrap: wrap
+          min-height: 4.5rem
+          margin: 0 auto
+          .menu_item
+            position: relative
+            display: inline-flex
+            .menu_links
+              position: relative
+              text-decoration: none
+              height: 100%
+              width: 100%
+              color: $black
+              padding: 1.5rem
+              line-height: normal
+              font-size: 1.25rem
+              font-family: 'robotoslablight',sans-serif
+              &:after
+                content: ''
+                display: none
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 100%
+                background-color: $blue
+            &:hover .menu_links:after
+              display: flex
+        .lang_wrapper
+          position: relative
+          display: flex
+          align-items: center
+          margin-right: 1rem
+          &:after
+            content: ''
+            background-image: url("/img/lang.png")
+            height: 9px
+            width: 12px
+            background-repeat: no-repeat
+            background-size: 100% 100%
+            transform: rotate(0deg)
+            transition: all .5s
+          .lang_item
+            display: flex
+            opacity: 0
+            width: 0
+            transform: scale(0)
+            overflow: hidden
+            .lang_links
+              text-decoration: none
+              color: $black
+              &:hover
+                color: #3eb5f1
+          .lang_item_active
+            opacity: 1
+            width: 2.66rem
+            transform: scale(1)
+        .lang_wrapper_active
+          width: 10.5vw
+        .log_in_wrapper
+          position: relative
+          display: flex
+          align-items: center
+          .log_in
+            display: inline-flex
 
-
-
+.burger
+  background: none
+  border: none
+  cursor: pointer
+  height: 24px
+  padding: 0
+  position: relative
+  width: 30px
+  span
+    position: absolute
+    top: calc(50% - 2px)
+    left: 0
+    right: 0
+    background-color: $blue
+    height: 4px
+    width: 100%
+    border-radius: 4px
+    transition: .2s all
+  &:after, &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    background-color: $blue
+    height: 4px
+    width: 100%
+    border-radius: 4px
+    transition: .2s all
+  &:after
+    top: 0
+  &:before
+    bottom: 0
+.burger_active
+  background: none
+  border: none
+  cursor: pointer
+  height: 24px
+  padding: 0
+  position: relative
+  width: 30px
+  span
+    position: absolute
+    top: calc(50% - 2px)
+    left: 0
+    right: 0
+    background-color: $blue
+    height: 4px
+    width: 0
+    border-radius: 4px
+    transition: .2s all
+  &:after, &:before
+    content: ''
+    position: absolute
+    top: calc(50% - 2px)
+    left: 0
+    right: 0
+    background-color: $blue
+    height: 4px
+    width: 100%
+    border-radius: 4px
+    transition: .2s all
+  &:after
+    transform: rotate(45deg)
+  &:before
+    transform: rotate(-45deg)
