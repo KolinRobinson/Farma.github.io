@@ -1,11 +1,11 @@
 .section_header
-  display: none
   width: 100%
   height: 11rem
   border-bottom: 2px solid rgba(0, 0, 0, 1)
   position: fixed
   background-color: rgba(255, 255, 255, .85)
   z-index: 10
+  transition: .5s all
   .header_wrapper
     display: flex
     justify-content: space-between
@@ -20,6 +20,7 @@
         width: 100%
         height: 100%
         padding: 1.25rem 0
+        transition: .5s all
         img
           height: 100% !important
     .header_menu
@@ -33,26 +34,28 @@
         .menu_wrapper
           display: flex
           flex-wrap: wrap
+          min-height: 4.5rem
+          margin: 0 auto
           .menu_item
             position: relative
-            display: inline-block
+            display: inline-flex
             .menu_links
+              position: relative
               text-decoration: none
               height: 100%
               width: 100%
               color: $black
-              padding: 1.25rem
+              padding: 1.5rem
               line-height: normal
               font-size: 1.25rem
               font-family: 'robotoslablight',sans-serif
-            .active
+            &:hover, .menu_links_active
               background-color: $blue
-              color: $white
+              color: $black
         .lang_wrapper
           position: relative
           display: flex
           align-items: center
-          width: 4.6vw
           margin-right: 1rem
           &:after
             content: ''
@@ -62,7 +65,7 @@
             background-repeat: no-repeat
             background-size: 100% 100%
             transform: rotate(0deg)
-            transition: all .5s
+            transition: all 1s
           .lang_item
             display: flex
             opacity: 0
@@ -78,8 +81,22 @@
             opacity: 1
             width: 2.66rem
             transform: scale(1)
+          .lang_item_open
+            opacity: 1
+            width: 2.66rem
+            transform: scale(1)
         .lang_wrapper_active
           width: 10.5vw
+          padding: 0
+          &:after
+            content: ''
+            background-image: url("/img/lang.png")
+            height: 9px
+            width: 12px
+            background-repeat: no-repeat
+            background-size: 100% 100%
+            transform: rotate(450deg)
+            transition: all 1s
         .log_in_wrapper
           position: relative
           display: flex
@@ -88,13 +105,13 @@
             display: inline-flex
 
 .section_header__small
-  display: none
   width: 100%
   height: 4.5rem
   border-bottom: 2px solid rgba(0, 0, 0, 1)
   position: fixed
   background-color: rgba(255, 255, 255, 1)
   z-index: 10
+  transition: .5s all
   .header_wrapper
     display: flex
     justify-content: space-between
@@ -110,6 +127,7 @@
         width: 100%
         height: 100%
         padding: .25rem 0
+        transition: .5s all
         img
           max-height: 4rem
           height: 100% !important
@@ -139,18 +157,9 @@
               line-height: normal
               font-size: 1.25rem
               font-family: 'robotoslablight',sans-serif
-              &:after
-                content: ''
-                display: none
-                position: absolute
-                top: 0
-                left: 0
-                bottom: 0
-                width: 100%
-                height: 100%
-                background-color: $blue
-            &:hover .menu_links:after
-              display: flex
+            &:hover, .menu_links_active
+              background-color: $blue
+              color: $black
         .lang_wrapper
           position: relative
           display: flex
@@ -164,7 +173,7 @@
             background-repeat: no-repeat
             background-size: 100% 100%
             transform: rotate(0deg)
-            transition: all .5s
+            transition: all 1s
           .lang_item
             display: flex
             opacity: 0
@@ -180,8 +189,22 @@
             opacity: 1
             width: 2.66rem
             transform: scale(1)
+          .lang_item_open
+            opacity: 1
+            width: 2.66rem
+            transform: scale(1)
         .lang_wrapper_active
           width: 10.5vw
+          padding: 0
+          &:after
+            content: ''
+            background-image: url("/img/lang.png")
+            height: 9px
+            width: 12px
+            background-repeat: no-repeat
+            background-size: 100% 100%
+            transform: rotate(450deg)
+            transition: all 1s
         .log_in_wrapper
           position: relative
           display: flex
@@ -260,26 +283,30 @@
   .burger
     display: inline-block
     position: absolute
-    top: 25px
+    top: 35px
     right: 25px
   .section_header
-    display: none
     width: 100%
-    height: 100%
+    min-height: 100px
+    height: auto
     border-bottom: 2px solid rgba(0, 0, 0, 1)
     position: fixed
-    background-color: rgba(255, 255, 255, .85)
+    background-color: rgba(255, 255, 255, 1)
     z-index: 10
     .header_wrapper
       display: flex
+      position: relative
       justify-content: space-between
       flex-wrap: wrap
       height: 100%
+      width: 100%
       flex-direction: column
       align-items: center
       .header_logo
-        height: 100%
-        position: relative
+        height: 100px
+        position: absolute
+        left: 0
+        top: 0
         .home_link
           display: flex
           align-items: center
@@ -290,30 +317,43 @@
             height: 100% !important
             max-height: 4rem
       .header_menu
+        margin: 100px 0 50px
+        display: none
+        align-items: center
+        width: 100%
+        justify-content: center
+      .header_menu_active
         display: flex
-        align-items: flex-end
         .header_menu_wrapper
           display: flex
           justify-content: flex-start
           flex-wrap: wrap
-          align-items: stretch
+          align-items: center
           flex-direction: column
+          width: 100%
           .menu_wrapper
             display: flex
             flex-wrap: wrap
             flex-direction: column
+            width: 100%
+            padding: 0
             .menu_item
               position: relative
               display: inline-block
+              width: 100%
               .menu_links
+                display: flex
                 text-decoration: none
                 height: 100%
                 width: 100%
                 color: $black
-                padding: 1.25rem
+                padding: .5rem 37vw
                 line-height: normal
                 font-size: 1.25rem
                 font-family: 'robotoslablight',sans-serif
+              a:hover
+                background-color: $blue
+                color: $black
               .active
                 background-color: $blue
                 color: $white
@@ -322,11 +362,12 @@
             display: flex
             align-items: center
             width: 100%
-            margin-right: 1rem
             flex-direction: column
+            padding: 0
             &:after
               content: none
             .lang_item
+              justify-content: center
               display: flex
               opacity: 1
               width: 100%
