@@ -15,15 +15,82 @@
 .carousel
   padding: 11rem
 .slide
-  display: block
   position: relative
   width: 100%
-  height: 55vw
+  min-height: 33vw
+  height: 100%
+  .carousel_wrapper
+    position: absolute
+    width: 100%
+    z-index: 5
+    .carousel_text_wrapper
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      .carousel_text_block
+        display: flex
+        padding-top: 10rem
+        justify-content: flex-end
+        flex-wrap: wrap
+        flex: 1 1
+        max-width: 500px
+  .carousel_img
+    position: relative
+    width: 100%
+    height: 100%
+    z-index: 2
+    opacity: .7
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #00111b
+    z-index: 1
+.owl-dots
+  position: absolute
+  bottom: 20px
+  z-index: 10
+  display: flex
+  justify-content: center
+  border-radius: 15px
+  width: 100%
+  .active
+    background-color: rgba(255, 255, 255, 1) !important
+  .owl-dot
+    margin: 0.7rem
+    span
+      width: 6rem
+      height: 5px
+      display: flex
+      cursor: pointer
+      transition: 0.5s all
+      background-color: rgba(255, 255, 255, .4)
 
+.about_us
+  background-color: #efefef
+  background: radial-gradient(bottom, ellipse, rgba(220, 220, 220, .8) 0, rgba(255, 255, 255, 0) 100%)
 .about_us_wrapper
   display: flex
-
-
+  flex-direction: column
+  width: 100%
+  align-items: center
+  justify-content: center
+  .about_us_block
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    .about_us_left
+      display: flex
+      flex: 1 1
+      max-width: 555px
+      flex-direction: column
+    .about_us_right
+      display: flex
+      flex: 1 1
+      align-items: flex-end
 
 .maps
   position: relative

@@ -42,8 +42,8 @@ $(document).ready(function(){
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
-        item: 1
+        autoplay: true,
+        items: 1
     });
 });
 

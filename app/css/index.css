@@ -813,16 +813,158 @@ a {
   padding: 11rem; }
 
 .slide {
-  display: block;
   position: relative;
   width: 100%;
-  height: 55vw; }
+  min-height: 33vw;
+  height: 100%; }
+  .slide .carousel_wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 5; }
+    .slide .carousel_wrapper .carousel_text_wrapper {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .slide .carousel_wrapper .carousel_text_wrapper .carousel_text_block {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 10rem;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1;
+            -ms-flex: 1 1;
+                flex: 1 1;
+        max-width: 500px; }
+  .slide .carousel_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: .7; }
+  .slide:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00111b;
+    z-index: 1; }
+
+.owl-dots {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  width: 100%; }
+  .owl-dots .active {
+    background-color: white !important; }
+  .owl-dots .owl-dot {
+    margin: 0.7rem; }
+    .owl-dots .owl-dot span {
+      width: 6rem;
+      height: 5px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      cursor: pointer;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all;
+      background-color: rgba(255, 255, 255, 0.4); }
+
+.about_us {
+  background-color: #efefef;
+  background: -webkit-radial-gradient(bottom, ellipse, rgba(220, 220, 220, 0.8) 0, rgba(255, 255, 255, 0) 100%);
+  background: -o-radial-gradient(bottom, ellipse, rgba(220, 220, 220, 0.8) 0, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(bottom, ellipse, rgba(220, 220, 220, 0.8) 0, rgba(255, 255, 255, 0) 100%); }
 
 .about_us_wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .about_us_wrapper .about_us_block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .about_us_wrapper .about_us_block .about_us_left {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1;
+          -ms-flex: 1 1;
+              flex: 1 1;
+      max-width: 555px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .about_us_wrapper .about_us_block .about_us_right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1;
+          -ms-flex: 1 1;
+              flex: 1 1;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
 
 .maps {
   position: relative;
