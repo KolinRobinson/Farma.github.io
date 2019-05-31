@@ -1,0 +1,12 @@
+
+app/psd/Force_farma_cartochka_tovara.psd
+*.psd
+node_modules/.bin/acorn
+*.cmd
+node_modules/.bin/atob
+node_modules/.bin/browser-sync
+node_modules/.bin/browserslist
+node_modules/.bin/color-support
+node_modules/.bin/cleancss
+dan (1).png
+node_modules/.bin/not-in-publish

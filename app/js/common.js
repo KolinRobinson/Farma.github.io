@@ -2,7 +2,7 @@ $(function() { var logo = $(".section_header");
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 500 && $(window).width() > 1200) {
+    if (scroll >= 300 && $(window).width() > 1200) {
         if(!logo.hasClass("section_header__small")) {
             logo.hide();
             logo.removeClass('section_header').addClass("section_header__small").fadeIn( "slow");
@@ -51,6 +51,15 @@ var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.382285, lng: 30.478220},
-        zoom: 16
+        zoom: 16,
+        panControl: false,
+        zoomControl: false,
+        scaleControl: false,
+        disableDefaultUI: true
+    });
+    var marker = new google.maps.Marker({
+        position: {lat: 50.382285, lng: 30.478220},
+        map: map,
+        icon: 'img/marker.png'
     });
 }
