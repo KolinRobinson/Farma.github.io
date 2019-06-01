@@ -43,18 +43,18 @@ html(lang="ru")
                             div.about_us_right
                                 img(src="img/about_us_img-768x407.png").about_us_img
             include ../includes/_category
-            div(id="map")
+            div.map_block
+                div(id="map")
                 div.map_info_wrapper
-                    div.map_info
-                        ul.map_info_menu
-                            li.map_info_item
-                                img(src='img/map_icon_white.png')
-                                a.map_info_link
-                            li.map_info_item
-                                img(src='img/mail_icon_white.png')
-                                a.map_info_link
-                            li.map_info_item
-                                img(src='img/tel_icon_white.png')
-                                a.map_info_link
+                    ul.map_info_menu
+                        li.map_info_item
+                            img(src='img/map_icon_white.png')
+                            a(href="#").map_info_link 03127, Украина, Киев, Голосеевский проспект 132
+                        li.map_info_item
+                            img(src='img/mail_icon_white.png')
+                            a(href="#").map_info_link +38 (044) 29-00-308
+                        li.map_info_item
+                            img(src='img/tel_icon_white.png')
+                            a(href="#").map_info_link office@ffd.com.ua
             include ../includes/_footer
         include ../includes/_scripts

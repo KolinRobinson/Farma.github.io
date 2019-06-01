@@ -4,7 +4,34 @@ html(lang="ru")
     body
         div.page_wrapper
             include ../includes/_header
-            div.about_us
+            div.controll_block_info
+                div.container
+                    div.controll_info_wrapper
+                        div.controll_block_title
+                            h2.controll_info_title Фармаконадзор
+                        div.controll_info_text
+                            p Lorem Ipsum — это текст-«рыба», часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной «рыбой» для текстов на латинице с начала XVI века.
+                            p В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+            div.history_line
+                div.container
+                    div.history_line_wrapper
+                        span
+                            a(href="/index.html" title="Головна").history_link Головна
+                        span.history_item /
+                        span Фармаконадзор
+            div.controll_block_links
+                div.container
+                    ul.controll_links_menu
+                        li
+                            a(href="#") Lorem Ipsum — это текст-«рыба»?
+                        li
+                            a(href="#") Lorem Ipsum — это текст-«рыба»?
+                        li
+                            a(href="#") Lorem Ipsum — это текст-«рыба»?
+                        li
+                            a(href="#") Lorem Ipsum — это текст-«рыба»?
+                        li
+                            a(href="#") Lorem Ipsum — это текст-«рыба»?
             include ../includes/_category
             include ../includes/_footer
         include ../includes/_scripts

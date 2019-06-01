@@ -4,7 +4,23 @@ html(lang="ru")
     body
         div.page_wrapper
             include ../includes/_header
-            div.about_us
-            include ../includes/_category
+            div.contact_block_info
+                div.container
+                    div.contact_info_wrapper
+                        div.contact_block_title
+                            h2.contact_info_title Контакты
+                        div.contact_info_text
+                            ul.contact_info_menu
+                                li.contact_info_item
+                                    img(src='img/map_icon_white.png')
+                                    a(href="#").contact_info_link 03127, Украина, Киев, Голосеевский проспект 132
+                                li.contact_info_item
+                                    img(src='img/mail_icon_white.png')
+                                    a(href="#").contact_info_link +38 (044) 29-00-308
+                                li.contact_info_item
+                                    img(src='img/tel_icon_white.png')
+                                    a(href="#").contact_info_link office@ffd.com.ua
+            div.map_block
+                div(id="map")
             include ../includes/_footer
         include ../includes/_scripts

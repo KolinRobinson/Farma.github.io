@@ -1,0 +1,57 @@
+.controll_block_info
+  position: relative
+  display: flex
+  min-height: 500px
+  width: 100%
+  &:before, &:after
+    content: ''
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: absolute
+  &:before
+    background-image: url("/img/page_img_bg_original-1611x749.jpg")
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+    background-size: cover
+    z-index: -2
+  &:after
+    z-index: -1
+    background-color: rgba(0, 0, 0, .45)
+.controll_info_wrapper
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
+  min-height: calc(25rem + 10vh)
+  .controll_block_title
+    position: relative
+    z-index: 1
+    width: 100%
+    text-align: center
+    .controll_info_title
+      color: $white
+  .controll_info_text
+    position: relative
+    z-index: 1
+    width: 100%
+    p
+      color: $white
+.controll_links_menu
+  margin-bottom: 4rem
+  li
+    position: relative
+    &:before
+      position: relative
+      left: 0
+      content: ''
+      display: inline-flex
+      width: 8px
+      height: 8px
+      margin-right: 1.25rem
+      border-radius: 100%
+      background-color: $blue
+    a
+      color: $black
+      text-decoration: underline
