@@ -8,12 +8,13 @@ html(lang="ru")
                 div.container
                     div.catalog_top_wrapper
                         div.catalog_top_title
-                            h2.catalog_tittle
+                            h2.catalog_tittle каталог препаратов
                         div.catalog_top_menu
                             ul.catalog_menu_wrapper
                                 li.catalog_menu_item
-                                    a(href="#").catalog_menu_link Вся продукция
+                                    a(href="#").catalog_menu_link.catalog_menu_link_active Вся продукция
                                 li.catalog_menu_item
+                                    a(href="#").catalog_menu_link.catalog_menu_link_submenu По системе использования
                                     ul.catalog_minimenu_wrapper
                                         li.catalog_minimenu_item
                                             a(href="#").catalog_minimenu_link Пункт Меню
@@ -24,6 +25,7 @@ html(lang="ru")
                                         li.catalog_minimenu_item
                                             a(href="#").catalog_minimenu_link Пункт Меню
                                 li.catalog_menu_item
+                                    a(href="#").catalog_menu_link.catalog_menu_link_submenu По действию
                                     ul.catalog_minimenu_wrapper
                                         li.catalog_minimenu_item
                                             a(href="#").catalog_minimenu_link Пункт Меню
