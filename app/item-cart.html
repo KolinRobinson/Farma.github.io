@@ -10,100 +10,52 @@
   </head>
   <body>
     <div class="page_wrapper">
-      <section class="section_header">
-        <div class="container">
-          <div class="header_wrapper">
-            <div class="header_logo"><a href="/index.html" class="home_link"><img src="img/logo.png"></a></div>
-            <div class="burger"><span></span></div>
-            <div class="header_menu">
-              <div class="header_menu_wrapper">
-                <nav class="main_menu">
-                  <ul class="menu_wrapper">
-                    <li class="menu_item"><a href="/about.html" class="menu_links">О компании</a></li>
-                    <li class="menu_item"><a href="/catalog.html" class="menu_links">Каталог препаратов</a></li>
-                    <li class="menu_item"><a href="/controll.html" class="menu_links">Фармаконадзор</a></li>
-                    <li class="menu_item"><a href="/contact.html" class="menu_links">Контакты</a></li>
-                  </ul>
-                </nav>
-                <div class="other_menu">
-                  <ul class="lang_wrapper">
-                    <li class="lang_item lang_item_active"><a href="#" onclick="return false" class="lang_links">rus</a></li>
-                    <li class="lang_item"><a href="#" class="lang_links">ukr</a></li>
-                    <li class="lang_item"><a href="#" class="lang_links">eng</a></li>
-                  </ul>
-                </div>
-                <div class="log_in_wrapper"><a href="#" class="log_in"><img src="img/in_icon.png"></a></div>
+      <div class="container">
+        <div class="form_wrapper">
+          <div class="left_block">
+            <h3>Контактные данные</h3>
+            <form id="buy_form" class="form_message">
+              <div class="main_form">
+                <input placeholder="name" onkeyup="checkParams()" id="name" type="name" required="" class="input_info">
+                <input placeholder="surname" onkeyup="checkParams()" id="surname" type="surname" required="" class="input_info">
+                <input placeholder="Your Email" onkeyup="checkParams()" id="email" type="email" required="" class="input_info">
+                <input placeholder="telephone" onkeyup="checkParams()" id="phone" type="tel" required="" class="input_info">
               </div>
-            </div>
+              <div class="shipped_form">
+                <label for="cour">
+                  <input id="cour" name="shipped" type="radio" checked="checked"><span>Курьерская доставка</span><br>
+                  <input placeholder="address" required="" class="input_info_shipped">
+                </label>
+                <label for="pickup">
+                  <input id="pickup" name="shipped" type="radio"><span>Самовывоз</span>
+                </label>
+              </div>
+              <div class="payment_form">
+                <label for="prepayment">
+                  <input id="prepayment" name="payment" type="radio" checked="checked"><span>Предоплата</span>
+                </label>
+                <label for="cash">
+                  <input id="cash" name="payment" type="radio"><span>Наличные</span>
+                </label>
+              </div>
+            </form>
           </div>
-        </div>
-      </section>
-      <div class="about_us"></div>
-      <div class="categories_padding">
-        <div class="container">
-          <div class="category_wrapper">
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Нервная система</h3></a>
-              <div class="items_image"><img src="img/category_icon_1.png" class="item_image"></div>
-            </div>
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Костно-мышечная система</h3></a>
-              <div class="items_image"><img src="img/category_icon_2.png" class="item_image"></div>
-            </div>
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Офтальмология</h3></a>
-              <div class="items_image"><img src="img/category_icon_3.png" class="item_image"></div>
-            </div>
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Противопростудные</h3></a>
-              <div class="items_image"><img src="img/category_icon_4.png" class="item_image"></div>
-            </div>
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Аллергия</h3></a>
-              <div class="items_image"><img src="img/category_icon_5.png" class="item_image"></div>
-            </div>
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Онкология</h3></a>
-              <div class="items_image"><img src="img/category_icon_6.png" class="item_image"></div>
-            </div>
-            <div class="category_item"><a href="#" class="category_link">
-                <h3 class="item_name">Дезинфецирующие средства</h3></a>
-              <div class="items_image"><img src="img/category_icon_7.png" class="item_image"></div>
-            </div>
+          <div class="right_block">
+            <button type="submit" id="submit" disabled="" class="buy">Купить</button>
+            <p class="name">Напишите имя</p>
+            <p class="surname">Напишите фамилию</p>
+            <p class="email">Напишите почту</p>
+            <p class="telephone">Напишите телефон</p>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer_wrapper">
-            <div class="footer_logo"><img src="img/logo.png"></div>
-            <div class="footer_menu">
-              <div class="footer_menu_nav">
-                <ul class="footer_menu_nav_wrapper">
-                  <li class="footer_menu_nav_item"><a href="#">Про компанію</a></li>
-                  <li class="footer_menu_nav_item"><a href="#">Каталог препаратів</a></li>
-                  <li class="footer_menu_nav_item"><a href="#">Фармаконагляд</a></li>
-                  <li class="footer_menu_nav_item"><a href="#">Контакти</a></li>
-                </ul>
-              </div>
-              <div class="footer_menu_contact">
-                <ul class="footer_menu_contact_wrapper">
-                  <li class="footer_menu_contact_item"><img src="img/map_icon.png" class="footer_menu_contact_item_img"><a href="#" class="footer_menu_contact_item_link">03127, Україна, Київ, Голосіївський проспект 132</a></li>
-                  <li class="footer_menu_contact_item"><img src="img/tel_icon.png" class="footer_menu_contact_item_img"><a href="#" class="footer_menu_contact_item_link">+38 (044) 29-00-308</a></li>
-                  <li class="footer_menu_contact_item"><img src="img/mail_icon.png" class="footer_menu_contact_item_img"><a href="#" class="footer_menu_contact_item_link">office@ffd.com.ua</a></li>
-                </ul>
-              </div>
-              <div class="footer_menu_log_in"><a href="#" class="log_in"><img src="img/in_icon.png"></a></div>
-              <div class="copyrating"><span class="copyrating_text">Розробка сайту</span><a href="https://www.seotm.com/" class="copyrating_link">SEOTM Digital Agency</a></div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/libs.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/item_buy.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrCowuJTsdKvY3G8k458uj7_VSLe7eO5Y&amp;callback=initMap"></script>
   </body>
 </html>

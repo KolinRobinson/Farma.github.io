@@ -1687,3 +1687,159 @@ ul li {
       font-size: 3.3vw;
       padding: 1.3rem 0;
       margin: 0; }
+
+.form_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .form_wrapper .left_block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 600px;
+        -ms-flex: 1 1 600px;
+            flex: 1 1 600px;
+    border: 2px solid black;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .form_wrapper .right_block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 200px;
+        -ms-flex: 1 1 200px;
+            flex: 1 1 200px;
+    border: 2px solid black;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .form_wrapper .right_block .buy {
+      margin-top: 20px;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: #fc5f45;
+      padding: 20px -webkit-calc(20px + 2.34vw);
+      padding: 20px calc(20px + 2.34vw);
+      -webkit-border-radius: 30px;
+              border-radius: 30px;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
+      .form_wrapper .right_block .buy:hover {
+        background-color: #38c695; }
+    .form_wrapper .right_block p {
+      color: #fc5f45;
+      display: inline-block; }
+    .form_wrapper .right_block .deactive {
+      display: none; }
+
+.main_form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 750px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px; }
+  .main_form .input_info {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 -webkit-calc((100% / 2) - 30px);
+        -ms-flex: 1 1 calc((100% / 2) - 30px);
+            flex: 1 1 calc((100% / 2) - 30px);
+    text-align: center;
+    background-color: white;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 20px 0;
+    font-size: 16px;
+    border: 2px solid black; }
+    .main_form .input_info:nth-child(2) {
+      margin-left: 30px; }
+    .main_form .input_info:nth-child(4) {
+      margin-left: 30px; }
+
+.shipped_form {
+  display: none;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 750px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px; }
+  .shipped_form .input_info_shipped {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    font-size: 16px;
+    border: 2px solid black; }
+
+.payment_form {
+  display: none;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 750px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px; }
+
+.active_form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }

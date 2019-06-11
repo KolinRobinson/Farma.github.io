@@ -3,8 +3,36 @@ html(lang="ru")
     include ../includes/_head
     body
         div.page_wrapper
-            include ../includes/_header
-            div.about_us
-            include ../includes/_category
-            include ../includes/_footer
+            div.container
+                div.form_wrapper
+                    div.left_block
+                        h3 Контактные данные
+                        form(id="buy_form").form_message
+                            div.main_form
+                                input.input_info(placeholder='name' onkeyup="checkParams()" id="name" type="name", required='')
+                                input.input_info(placeholder='surname' onkeyup="checkParams()" id="surname" type="surname", required='')
+                                input.input_info(placeholder='Your Email' onkeyup="checkParams()" id="email" type="email", required='')
+                                input.input_info(placeholder='telephone' onkeyup="checkParams()" id="phone" type="tel", required='')
+                            div.shipped_form
+                                label(for="cour")
+                                    input(id="cour" name="shipped" type="radio" checked="checked")
+                                    span Курьерская доставка
+                                    br
+                                    input.input_info_shipped(placeholder='address', required='')
+                                label(for="pickup")
+                                    input(id="pickup" name="shipped" type="radio")
+                                    span Самовывоз
+                            div.payment_form
+                                label(for="prepayment" )
+                                    input(id="prepayment" name="payment" type="radio" checked="checked")
+                                    span Предоплата
+                                label(for="cash")
+                                    input(id="cash" name="payment" type="radio")
+                                    span Наличные
+                    div.right_block
+                        button(type="submit" id="submit" disabled="").buy Купить
+                        p.name Напишите имя
+                        p.surname Напишите фамилию
+                        p.email Напишите почту
+                        p.telephone Напишите телефон
         include ../includes/_scripts
